@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-    This PowerShell script ensures that Microsoft consumer experiences must be turned off.
+    This PowerShell script ensures Kerberos encryption types must be configured to prevent the use of DES and RC4 encryption suites.
 
 .NOTES
     Author          : Travis Young
@@ -11,8 +11,8 @@
     Version         : 1.0
     CVEs            : N/A
     Plugin IDs      : N/A
-    STIG-ID         : WN11-CC-000197
-    Documentation   : https://stigaview.com/products/win11/v2r3/WN11-CC-000197/
+    STIG-ID         : WN11-SO-000190
+    Documentation   : https://stigaview.com/products/win11/v2r3/WN11-SO-000190/
 
 .TESTED ON
     Date(s) Tested  : 
@@ -23,7 +23,7 @@
 .USAGE
     Put any usage instructions here.
     Example syntax:
-    PS C:\> .\__remediation_template(STIG-ID-WN11-CC-000197).ps1 
+    PS C:\> .\__remediation_template(STIG-ID-WN11-SO-000190).ps1 
 #>
 
 # YOUR CODE GOES HERE
