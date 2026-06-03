@@ -28,8 +28,22 @@
 
 # YOUR CODE GOES HERE
 
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Parameters]
-"SupportedEncrytionTypes"=dword:7ffffff8
+# Registry path
+$RegPath = "HKLM:\SOFTWARE\Microsoft\CurrentVersion\Policies\System\Kerberos\Parameters"
+
+# Create the registry key if it does not exist
+if (-not (Test-Path $RegPath)) {
+    New-Item -Path $RegPath -Force | Out-Null
+}
+
+# Set SupportedEncrytionTypes = 0x7FFFFFF8
+New-ItemProperty -Path $RegPath `
+                 -Name "SupportedEncrytionTypes" `
+                 -PropertyType DWord `
+                 -Value 0x7FFFFFF8 `
+                 -Force | Out-Null
+
+Write-Host "SupportedEncrytionTypes has been set to 0x7FFFFFF8."
 
 Value Name: SupportedEncryptionTypes
 
