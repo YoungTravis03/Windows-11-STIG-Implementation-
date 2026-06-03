@@ -28,5 +28,19 @@
 
 # YOUR CODE GOES HEREWindows Registry Editor Version 5.00
 
-[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Personalization]
-"NoLockScreenCamera"=dword:00000001
+# Registry path
+$RegPath = "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Personalization"
+
+# Create the registry key if it does not exist
+if (-not (Test-Path $RegPath)) {
+    New-Item -Path $RegPath -Force | Out-Null
+}
+
+# Set NoLockScreenCamera = 1
+New-ItemProperty -Path $RegPath `
+                 -Name "NoLockScreenCamera" `
+                 -PropertyType DWord `
+                 -Value 1 `
+                 -Force | Out-Null
+
+Write-Host "NoLockScreenCamera policy has been configured."
