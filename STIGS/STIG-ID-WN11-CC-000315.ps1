@@ -28,6 +28,20 @@
 
 # YOUR CODE GOES HEREWindows Registry Editor Version 5.00Windows Registry Editor Version 5.00
 
-[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Installer]
-"AlwaysInstallElevated"=dword:00000000
+# Registry path
+$RegPath = "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Installer"
+
+# Create the registry key if it does not exist
+if (-not (Test-Path $RegPath)) {
+    New-Item -Path $RegPath -Force | Out-Null
+}
+
+# Set AlwaysInstallElevated = 0
+New-ItemProperty -Path $RegPath `
+                 -Name "AlwaysInstallElevated" `
+                 -PropertyType DWord `
+                 -Value 0 `
+                 -Force | Out-Null
+
+Write-Host "AlwaysInstallElevated has been set to 0."
 
