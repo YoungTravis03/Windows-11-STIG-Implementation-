@@ -27,8 +27,9 @@
 #>
 
 # YOUR CODE GOES HERE
-Registry Hive: HKEY_LOCAL_MACHINE
-Registry Path: \SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Parameters\
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Parameters]
+"SupportedEncrytionTypes"=dword:7ffffff8
 
 Value Name: SupportedEncryptionTypes
 
