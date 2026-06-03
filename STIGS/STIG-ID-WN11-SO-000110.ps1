@@ -11,7 +11,7 @@
     Version         : 1.0
     CVEs            : N/A
     Plugin IDs      : N/A
-    STIG-ID         : WN11-SO-000190
+    STIG-ID         : WN11-SO-000110
     Documentation   : https://stigaview.com/products/win11/v2r3/WN11-SO-000110/
 
 .TESTED ON
