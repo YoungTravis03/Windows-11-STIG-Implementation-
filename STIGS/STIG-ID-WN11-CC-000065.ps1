@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-    This PowerShell script ensures indexing of encrypted files must be turned off.
+    This PowerShell script ensures Wi-Fi Sense must be disabled.
 
 .NOTES
     Author          : Travis Young
@@ -11,8 +11,8 @@
     Version         : 1.0
     CVEs            : N/A
     Plugin IDs      : N/A
-    STIG-ID         : WN11-OO-000065
-    Documentation   : https://stigaview.com/products/win11/v2r3/WN11-OO-000065/
+    STIG-ID         : WN11-CC-000065
+    Documentation   : https://stigaview.com/products/win11/v2r3/WN11-CC-000065/
 
 .TESTED ON
     Date(s) Tested  : 
@@ -23,7 +23,7 @@
 .USAGE
     Put any usage instructions here.
     Example syntax:
-    PS C:\> .\__remediation_template(STIG-ID-WN11-OO-000065).ps1 
+    PS C:\> .\__remediation_template(STIG-ID-WN11-CC-000065).ps1 
 #>
 
 # YOUR CODE GOES HERE
